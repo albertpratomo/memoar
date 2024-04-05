@@ -11,7 +11,7 @@ class SiteSeeder extends Seeder
     {
         Site::factory()->create([
             'name' => 'Reza Gunawan',
-            'died_at' => '2022-09-07',
+            'died_at' => '2022-09-06 08:00',
         ]);
     }
 }
