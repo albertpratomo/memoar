@@ -25,6 +25,8 @@ class SiteResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required(),
+                Forms\Components\TextInput::make('username')
+                    ->required()->unique(),
                 Forms\Components\DateTimePicker::make('died_at')
                     ->maxDate(now()),
             ]);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreSiteRequest;
 use App\Http\Requests\UpdateSiteRequest;
 use App\Models\Site;
+use Inertia\Inertia;
 
 class SiteController extends Controller
 {
@@ -37,7 +38,9 @@ class SiteController extends Controller
      */
     public function show(Site $site)
     {
-        //
+        return Inertia::render('Sites/Show', [
+            'site' => $site,
+        ]);
     }
 
     /**
