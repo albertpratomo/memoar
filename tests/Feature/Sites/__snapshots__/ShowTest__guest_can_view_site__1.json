@@ -1,0 +1,14 @@
+{
+    "errors": [],
+    "auth": {
+        "user": null
+    },
+    "site": {
+        "id": 1,
+        "name": "Prof. Al Kozey",
+        "username": "ruben77",
+        "died_at": 1714004077,
+        "created_at": "2024-04-25T00:14:37.000000Z",
+        "updated_at": "2024-04-25T00:14:37.000000Z"
+    }
+}

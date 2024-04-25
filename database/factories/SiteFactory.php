@@ -18,6 +18,7 @@ class SiteFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'username' => fake()->userName(),
             'died_at' => now(),
         ];
     }
