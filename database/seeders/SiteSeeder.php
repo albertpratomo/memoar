@@ -9,7 +9,7 @@ class SiteSeeder extends Seeder
 {
     public function run(): void
     {
-        Site::factory()->create([
+        Site::factory()->withTributes(2)->create([
             'name' => 'Reza Gunawan',
             'username' => 'rezagunawan',
             'died_at' => '2022-09-06 08:00',

@@ -5,8 +5,18 @@
     },
     "site": {
         "id": 1,
-        "name": "Sylvester Nikolaus",
-        "username": "bschuppe",
-        "diedAt": "2024-04-27T00:12:01.000000Z"
+        "name": "Ayana Dickens II",
+        "username": "stacey07",
+        "diedAt": "2024-04-27T11:12:19.000000Z",
+        "tributes": [
+            {
+                "id": 1,
+                "body": "Qui suscipit provident et possimus at id est. Et sint consectetur aspernatur numquam. Quo sint sint eligendi qui. Voluptatibus at quo nostrum numquam."
+            },
+            {
+                "id": 2,
+                "body": "Doloremque pariatur culpa ea quo libero eveniet necessitatibus voluptas. Aut voluptatem exercitationem vitae et omnis atque. Itaque rerum quasi aut voluptatibus porro excepturi."
+            }
+        ]
     }
 }

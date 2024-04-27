@@ -10,7 +10,10 @@ if (! function_exists('resource')) {
     /**
      * Returns the corresponding JsonResource of a Model/Collection.
      */
-    function resource(null|Collection|Model $resource, string $type = null): JsonResource|AnonymousResourceCollection|array
+    function resource(
+        null|Collection|Model|MissingValue $resource,
+        string $type = null
+    ): array|null|AnonymousResourceCollection|JsonResource|MissingValue
     {
         if ((! $resource) || ($resource instanceof MissingValue)) {
             return $resource;

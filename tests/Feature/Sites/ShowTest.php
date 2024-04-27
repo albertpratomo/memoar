@@ -10,7 +10,7 @@ class ShowTest extends TestCase
     /** @test */
     public function guest_can_view_site()
     {
-        $site = Site::factory()->create();
+        $site = Site::factory()->withTributes(2)->create();
 
         $response = $this->get("/$site->username");
 

@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Site;
+use App\Models\Tribute;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,5 +23,14 @@ class SiteFactory extends Factory
             'username' => fake()->userName(),
             'died_at' => now(),
         ];
+    }
+
+    public function withTributes(int $count = 2): Factory
+    {
+        return $this->afterCreating(function (Site $site) use ($count) {
+            Tribute::factory($count)->create([
+                'site_id' => $site->id,
+            ]);
+        });
     }
 }
