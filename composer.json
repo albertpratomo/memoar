@@ -57,10 +57,13 @@
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
         ],
-        "test": [
+        "p": [
+            "vendor/bin/pint"
+        ],
+        "t": [
             "vendor/bin/pest --compact"
         ],
-        "test:u": [
+        "tu": [
             "vendor/bin/pest --compact --update-snapshots"
         ]
     },

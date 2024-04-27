@@ -4,14 +4,13 @@ namespace App\Policies;
 
 use App\Models\Site;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
 
 class SitePolicy
 {
     /**
      * Perform pre-authorization checks.
      */
-    public function before(User $user, string $ability): bool|null
+    public function before(User $user, string $ability): ?bool
     {
         // TODO: Return true if user is admin.
         return true;

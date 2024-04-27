@@ -19,7 +19,7 @@ class SiteResource extends JsonResource
             'name' => $this->name,
             'username' => $this->username,
             'diedAt' => $this->died_at,
-            'tributes' => resource($this->whenLoaded('tributes'))
+            'tributes' => resource($this->whenLoaded('tributes')),
         ];
     }
 }

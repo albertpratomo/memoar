@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Resources\MissingValue;
 use Illuminate\Support\Collection;
 
@@ -12,9 +12,8 @@ if (! function_exists('resource')) {
      */
     function resource(
         null|Collection|Model|MissingValue $resource,
-        string $type = null
-    ): array|null|AnonymousResourceCollection|JsonResource|MissingValue
-    {
+        ?string $type = null
+    ): array|null|AnonymousResourceCollection|JsonResource|MissingValue {
         if ((! $resource) || ($resource instanceof MissingValue)) {
             return $resource;
         } elseif (empty($resource)) {

@@ -17,7 +17,7 @@ class TributeFactory extends Factory
     public function definition(): array
     {
         return [
-            'body'=> fake()->text(),
+            'body' => fake()->text(),
         ];
     }
 }
