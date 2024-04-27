@@ -39,7 +39,7 @@ class SiteController extends Controller
     public function show(Site $site)
     {
         return Inertia::render('Sites/Show', [
-            'site' => $site,
+            'site' => resource($site),
         ]);
     }
 

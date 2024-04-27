@@ -17,7 +17,7 @@ class Site extends Model
     protected function casts(): array
     {
         return [
-            'died_at' => 'timestamp',
+            'died_at' => 'datetime',
         ];
     }
 }
