@@ -18,7 +18,7 @@ class SiteResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'username' => $this->username,
-            'diedAt' => $this->died_at,
+            'diedAt' => $this->died_at->format('j F Y'),
             'tributes' => resource($this->whenLoaded('tributes')),
         ];
     }
