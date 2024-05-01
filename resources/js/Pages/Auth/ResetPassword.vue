@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import { Head, useForm } from '@inertiajs/vue3';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import { Head, useForm } from '@inertiajs/vue3';
 
 const props = defineProps<{
     email: string;
@@ -18,13 +18,13 @@ const form = useForm({
     password_confirmation: '',
 });
 
-const submit = () => {
+function submit() {
     form.post(route('password.store'), {
         onFinish: () => {
             form.reset('password', 'password_confirmation');
         },
     });
-};
+}
 </script>
 
 <template>
@@ -37,9 +37,9 @@ const submit = () => {
 
                 <TextInput
                     id="email"
+                    v-model="form.email"
                     type="email"
                     class="mt-1 block w-full"
-                    v-model="form.email"
                     required
                     autofocus
                     autocomplete="username"
@@ -53,9 +53,9 @@ const submit = () => {
 
                 <TextInput
                     id="password"
+                    v-model="form.password"
                     type="password"
                     class="mt-1 block w-full"
-                    v-model="form.password"
                     required
                     autocomplete="new-password"
                 />
@@ -68,9 +68,9 @@ const submit = () => {
 
                 <TextInput
                     id="password_confirmation"
+                    v-model="form.password_confirmation"
                     type="password"
                     class="mt-1 block w-full"
-                    v-model="form.password_confirmation"
                     required
                     autocomplete="new-password"
                 />

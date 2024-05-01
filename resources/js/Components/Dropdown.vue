@@ -11,14 +11,13 @@ const props = withDefaults(
         align: 'right',
         width: '48',
         contentClasses: 'py-1 bg-white',
-    }
+    },
 );
 
-const closeOnEscape = (e: KeyboardEvent) => {
-    if (open.value && e.key === 'Escape') {
+function closeOnEscape(e: KeyboardEvent) {
+    if (open.value && e.key === 'Escape')
         open.value = false;
-    }
-};
+}
 
 onMounted(() => document.addEventListener('keydown', closeOnEscape));
 onUnmounted(() => document.removeEventListener('keydown', closeOnEscape));
@@ -30,13 +29,12 @@ const widthClass = computed(() => {
 });
 
 const alignmentClasses = computed(() => {
-    if (props.align === 'left') {
+    if (props.align === 'left')
         return 'ltr:origin-top-left rtl:origin-top-right start-0';
-    } else if (props.align === 'right') {
+    else if (props.align === 'right')
         return 'ltr:origin-top-right rtl:origin-top-left end-0';
-    } else {
+    else
         return 'origin-top';
-    }
 });
 
 const open = ref(false);
@@ -49,7 +47,7 @@ const open = ref(false);
         </div>
 
         <!-- Full Screen Dropdown Overlay -->
-        <div v-show="open" class="fixed inset-0 z-40" @click="open = false"></div>
+        <div v-show="open" class="fixed inset-0 z-40" @click="open = false" />
 
         <Transition
             enter-active-class="transition ease-out duration-200"

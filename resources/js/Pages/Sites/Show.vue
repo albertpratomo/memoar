@@ -2,10 +2,10 @@
 import { Head } from '@inertiajs/vue3';
 
 interface Props {
-    site: Object
+    site: Object;
 }
 
-defineProps<Props>()
+defineProps<Props>();
 </script>
 
 <template>
@@ -20,6 +20,7 @@ defineProps<Props>()
     <div class="max-w-sm flex flex-col gap-y-4 mx-auto">
         <div
             v-for="tribute in site.tributes"
+            :key="tribute.id"
             class="border rounded p-3"
         >
             {{ tribute.body }}
