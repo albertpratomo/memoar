@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('tributes', function (Blueprint $table) {
             $table->id();
+            $table->string('author');
             $table->text('body');
             $table->foreignId('site_id')->constrained();
             $table->timestamps();

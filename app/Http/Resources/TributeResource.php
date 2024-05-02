@@ -16,6 +16,7 @@ class TributeResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'author' => $this->author,
             'body' => $this->body,
         ];
     }
