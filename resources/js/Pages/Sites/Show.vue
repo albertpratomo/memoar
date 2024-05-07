@@ -23,6 +23,10 @@ defineProps<Props>();
             :key="tribute.id"
             class="border rounded p-3"
         >
+            <div class="font-semibold">
+                {{ tribute.author }}
+            </div>
+
             {{ tribute.body }}
         </div>
     </div>
