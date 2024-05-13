@@ -7,6 +7,14 @@
         "l": "eslint .",
         "lf": "eslint . --fix"
     },
+    "dependencies": {
+        "class-variance-authority": "^0.7.0",
+        "clsx": "^2.1.1",
+        "lucide-vue-next": "^0.378.0",
+        "radix-vue": "^1.7.4",
+        "tailwind-merge": "^2.3.0",
+        "tailwindcss-animate": "^1.0.7"
+    },
     "devDependencies": {
         "@antfu/eslint-config": "^2.16.1",
         "@inertiajs/vue3": "^1.0.0",
