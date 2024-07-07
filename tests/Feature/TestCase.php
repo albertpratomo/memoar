@@ -5,9 +5,12 @@ namespace Tests\Feature;
 use Illuminate\Testing\TestResponse;
 use Inertia\Testing\AssertableInertia;
 use Tests\TestCase as BaseTestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 abstract class TestCase extends BaseTestCase
 {
+    use RefreshDatabase;
+
     /**
      * Assert that $response renders Inertia $component with snapshotted props.
      */
